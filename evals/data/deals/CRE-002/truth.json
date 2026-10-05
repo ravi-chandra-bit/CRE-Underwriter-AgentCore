@@ -1,0 +1,57 @@
+{
+  "extraction": {
+    "rent_roll": {
+      "unit_count": 48,
+      "occupied_units": 42,
+      "in_place_annual_rent": 910476.0
+    },
+    "t12": {
+      "gross_potential_rent": 1019373.78,
+      "vacancy_loss": 99302.2,
+      "concessions": 8913.99,
+      "bad_debt": 9912.37,
+      "real_estate_taxes": 94421.35,
+      "insurance": 50751.43,
+      "utilities": 32850.56,
+      "repairs_maintenance": 30006.97,
+      "management_fee": 29712.48,
+      "general_admin": 13731.38,
+      "marketing": 7181.3,
+      "contract_services": 11992.71,
+      "payroll": 85056.65,
+      "other_income": 21441.93
+    }
+  },
+  "metrics": {
+    "gross_potential_rent": 1035840.0,
+    "effective_gross_income": 931917.93,
+    "underwritten_vacancy_rate": 0.12102641334569042,
+    "operating_expenses": 355704.82999999996,
+    "noi": 561813.1000000001,
+    "annual_debt_service": 408334.78,
+    "dscr": 1.3758639418371368,
+    "debt_yield": 0.11827644210526318,
+    "ltv": 0.7251908396946565,
+    "breakeven_occupancy": 0.7308056070435588
+  },
+  "exceptions": [],
+  "label_categories": {
+    "Gross Potential Rent": "gross_potential_rent",
+    "Vacancy Loss": "vacancy_loss",
+    "Free Rent": "concessions",
+    "Bad Debt Write-offs": "bad_debt",
+    "Taxes - Real Estate": "real_estate_taxes",
+    "Property Insurance": "insurance",
+    "Trash Removal": "utilities",
+    "Common Area Electric": "utilities",
+    "R&M": "repairs_maintenance",
+    "Make Ready": "repairs_maintenance",
+    "Management Fee": "management_fee",
+    "G&A": "general_admin",
+    "Marketing": "marketing",
+    "Snow Removal": "contract_services",
+    "Personnel": "payroll",
+    "RUBS Income": "other_income",
+    "Late Fees": "other_income"
+  }
+}

@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "underwriter"
+version = "0.1.0"
+description = "Agentic credit underwriting assistant for CRE and agricultural lending (Bedrock AgentCore + Strands Agents)"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.7",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+agent = [
+  "strands-agents>=1.10",
+  "bedrock-agentcore>=1.0",
+  "boto3>=1.40",
+  "mcp>=1.10",
+  "opentelemetry-api>=1.30",
+  "opentelemetry-sdk>=1.30",
+]
+runtime = [
+  "aws-opentelemetry-distro>=0.10",
+]
+dev = [
+  "pytest>=8",
+  "ruff>=0.6",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+underwriter = ["py.typed", "data/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+extend-exclude = ["infra/cdk.out"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]

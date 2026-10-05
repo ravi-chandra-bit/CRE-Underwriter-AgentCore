@@ -1,0 +1,53 @@
+{
+  "extraction": {
+    "rent_roll": {
+      "unit_count": 8,
+      "occupied_units": 5,
+      "in_place_annual_rent": 422608.8
+    },
+    "t12": {
+      "gross_potential_rent": 1145821.85,
+      "vacancy_loss": 615632.55,
+      "concessions": 13215.69,
+      "bad_debt": 8749.72,
+      "real_estate_taxes": 70601.91,
+      "insurance": 15445.49,
+      "utilities": 21542.72,
+      "repairs_maintenance": 25944.4,
+      "management_fee": 20498.4,
+      "general_admin": 10247.94,
+      "marketing": 2961.28,
+      "contract_services": 15394.81,
+      "other_income": 15578.46
+    }
+  },
+  "metrics": {
+    "gross_potential_rent": 1131170.4,
+    "effective_gross_income": 438187.26000000007,
+    "underwritten_vacancy_rate": 0.6263968717710434,
+    "operating_expenses": 182636.95,
+    "noi": 243310.31000000006,
+    "annual_debt_service": 183362.55,
+    "dscr": 1.326935680159335,
+    "debt_yield": 0.11264366203703706,
+    "ltv": 0.6708074534161491,
+    "breakeven_occupancy": 0.320606904141056
+  },
+  "exceptions": [],
+  "label_categories": {
+    "Scheduled Rent": "gross_potential_rent",
+    "Vacancy": "vacancy_loss",
+    "Concessions": "concessions",
+    "Bad Debt": "bad_debt",
+    "RE Taxes": "real_estate_taxes",
+    "Property Insurance": "insurance",
+    "Gas": "utilities",
+    "Utilities": "utilities",
+    "Maintenance": "repairs_maintenance",
+    "Mgmt Fees": "management_fee",
+    "General & Administrative": "general_admin",
+    "Marketing": "marketing",
+    "Snow Removal": "contract_services",
+    "Ancillary Revenue": "other_income"
+  }
+}

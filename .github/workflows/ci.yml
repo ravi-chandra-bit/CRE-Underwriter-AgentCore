@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: pip install -e ".[agent,dev]"
+      - name: Lint
+        run: ruff check . && ruff format --check .
+      - name: Unit tests
+        run: pytest -q
+        env:
+          AWS_REGION: us-east-1
+      - name: Dataset is reproducible
+        run: |
+          python -m evals.synth.generator
+          git diff --exit-code -- evals/data
+      - name: Offline evaluation gate
+        run: python -m evals.run_evals --mode offline --gate
+      - name: Publish eval report
+        if: always()
+        run: cat evals/reports/latest_offline.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-offline
+          path: evals/reports/
+
+  cdk-synth:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Synthesize (asset bundling skipped)
+        working-directory: infra
+        run: |
+          pip install -r requirements.txt
+          npx --yes aws-cdk@2 synth -c 'aws:cdk:bundling-stacks=[]' --quiet
+        env:
+          CDK_DEFAULT_ACCOUNT: "123456789012"
+          CDK_DEFAULT_REGION: us-east-1

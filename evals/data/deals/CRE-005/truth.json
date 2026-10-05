@@ -1,0 +1,50 @@
+{
+  "extraction": {
+    "rent_roll": {
+      "unit_count": 10,
+      "occupied_units": 10,
+      "in_place_annual_rent": 3248394.12
+    },
+    "t12": {
+      "gross_potential_rent": 3187361.46,
+      "vacancy_loss": 0.0,
+      "real_estate_taxes": 335006.69,
+      "insurance": 107002.04,
+      "utilities": 224286.55,
+      "repairs_maintenance": 147395.39,
+      "management_fee": 99887.46,
+      "general_admin": 51837.22,
+      "marketing": 13089.1,
+      "contract_services": 58368.35,
+      "other_income": 27806.71
+    }
+  },
+  "metrics": {
+    "gross_potential_rent": 3248394.119999999,
+    "effective_gross_income": 3113781.123999999,
+    "underwritten_vacancy_rate": 0.05,
+    "operating_expenses": 1036872.7999999999,
+    "noi": 2054588.323999999,
+    "annual_debt_service": 1545008.99,
+    "dscr": 1.329822892486858,
+    "debt_yield": 0.10252436746506982,
+    "ltv": 0.787426326129666,
+    "breakeven_occupancy": 0.7931288460773352
+  },
+  "exceptions": [
+    "CP-3.2.1"
+  ],
+  "label_categories": {
+    "Base Rent": "gross_potential_rent",
+    "Vacancy": "vacancy_loss",
+    "RE Taxes": "real_estate_taxes",
+    "Property Insurance": "insurance",
+    "Water & Sewer": "utilities",
+    "R&M": "repairs_maintenance",
+    "Property Management": "management_fee",
+    "G&A": "general_admin",
+    "Advertising": "marketing",
+    "Janitorial": "contract_services",
+    "Parking Income": "other_income"
+  }
+}

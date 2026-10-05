@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+*.egg-info/
+build/
+dist/
+infra/cdk.out/
+.pytest_cache/
+.ruff_cache/
+evals/reports/*.json
+evals/reports/*.md
+!evals/reports/.gitkeep
+!evals/reports/baseline_offline.md
+.lambda_build/
+evals/data/deals/*/work/

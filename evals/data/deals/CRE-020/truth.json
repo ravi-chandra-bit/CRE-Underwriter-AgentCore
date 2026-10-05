@@ -1,0 +1,51 @@
+{
+  "extraction": {
+    "rent_roll": {
+      "unit_count": 11,
+      "occupied_units": 10,
+      "in_place_annual_rent": 2099708.4
+    },
+    "t12": {
+      "gross_potential_rent": 2121824.43,
+      "vacancy_loss": 62818.06,
+      "real_estate_taxes": 260777.5,
+      "insurance": 63771.95,
+      "utilities": 100340.67,
+      "repairs_maintenance": 119755.7,
+      "management_fee": 51373.27,
+      "general_admin": 20968.53,
+      "marketing": 19847.55,
+      "contract_services": 39148.33,
+      "other_income": 46473.7
+    }
+  },
+  "metrics": {
+    "gross_potential_rent": 2158972.4400000004,
+    "effective_gross_income": 2097497.518,
+    "underwritten_vacancy_rate": 0.05,
+    "operating_expenses": 687535.15554,
+    "noi": 1393482.3624600002,
+    "annual_debt_service": 1065595.85,
+    "dscr": 1.3077025050914004,
+    "debt_yield": 0.11329124898048783,
+    "ltv": 0.6501057082452432,
+    "breakeven_occupancy": 0.7981284399999102
+  },
+  "exceptions": [],
+  "label_categories": {
+    "Rental Income": "gross_potential_rent",
+    "Less: Vacancy": "vacancy_loss",
+    "Property Taxes": "real_estate_taxes",
+    "Property Insurance": "insurance",
+    "Common Area Electric": "utilities",
+    "Electric": "utilities",
+    "Repairs & Maintenance": "repairs_maintenance",
+    "Maintenance": "repairs_maintenance",
+    "Management Fee": "management_fee",
+    "General & Administrative": "general_admin",
+    "Advertising": "marketing",
+    "Contract Services": "contract_services",
+    "Laundry Income": "other_income",
+    "Pet Fees": "other_income"
+  }
+}

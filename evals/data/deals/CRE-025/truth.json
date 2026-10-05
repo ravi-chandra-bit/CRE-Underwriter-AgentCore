@@ -1,0 +1,54 @@
+{
+  "extraction": {
+    "rent_roll": {
+      "unit_count": 54,
+      "occupied_units": 47,
+      "in_place_annual_rent": 846900.0
+    },
+    "t12": {
+      "gross_potential_rent": 975758.79,
+      "vacancy_loss": 107697.13,
+      "concessions": 9268.33,
+      "bad_debt": 2154.41,
+      "real_estate_taxes": 104546.71,
+      "insurance": 48837.95,
+      "utilities": 66089.82,
+      "repairs_maintenance": 57550.74,
+      "management_fee": 34944.77,
+      "general_admin": 13100.36,
+      "marketing": 7205.58,
+      "contract_services": 14599.83,
+      "payroll": 80876.94,
+      "other_income": 13888.18
+    }
+  },
+  "metrics": {
+    "gross_potential_rent": 978456.0,
+    "effective_gross_income": 860788.18,
+    "underwritten_vacancy_rate": 0.13445264784517652,
+    "operating_expenses": 427752.70000000007,
+    "noi": 416835.48,
+    "annual_debt_service": 316485.73,
+    "dscr": 1.3170751174152464,
+    "debt_yield": 0.09283640979955456,
+    "ltv": 0.554320987654321,
+    "breakeven_occupancy": 0.7629880648695496
+  },
+  "exceptions": [],
+  "label_categories": {
+    "Scheduled Rent": "gross_potential_rent",
+    "Vacancy Loss": "vacancy_loss",
+    "Loss to Lease": "concessions",
+    "Uncollectible Rent": "bad_debt",
+    "Taxes - Real Estate": "real_estate_taxes",
+    "Insurance Expense": "insurance",
+    "Electric": "utilities",
+    "R&M": "repairs_maintenance",
+    "Management Fee": "management_fee",
+    "Office Expense": "general_admin",
+    "Marketing": "marketing",
+    "Pest Control": "contract_services",
+    "Personnel": "payroll",
+    "RUBS Income": "other_income"
+  }
+}

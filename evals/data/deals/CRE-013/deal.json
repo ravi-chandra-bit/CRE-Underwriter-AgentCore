@@ -1,0 +1,29 @@
+{
+  "loan": {
+    "deal_id": "CRE-013",
+    "borrower_name": "Synthetic Office Holdings 13 LLC",
+    "loan_type": "CRE",
+    "property_type": "office",
+    "interest_rate": 0.0609,
+    "amortization_years": 30,
+    "term_years": 10,
+    "interest_only_years": 0,
+    "payments_per_year": 12,
+    "purpose": "Refinance",
+    "loan_amount": 1990000.0,
+    "appraised_value": 3020000.0
+  },
+  "portfolio": "cre-west",
+  "documents": [
+    {
+      "doc_id": "CRE-013-RR",
+      "doc_type": "rent_roll",
+      "filename": "rent_roll.csv"
+    },
+    {
+      "doc_id": "CRE-013-T12",
+      "doc_type": "t12",
+      "filename": "t12.csv"
+    }
+  ]
+}

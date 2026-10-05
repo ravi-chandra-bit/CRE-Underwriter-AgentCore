@@ -1,0 +1,54 @@
+{
+  "extraction": {
+    "rent_roll": {
+      "unit_count": 6,
+      "occupied_units": 5,
+      "in_place_annual_rent": 1212182.88
+    },
+    "t12": {
+      "gross_potential_rent": 1269138.94,
+      "vacancy_loss": 38707.37,
+      "real_estate_taxes": 161616.56,
+      "insurance": 52951.4,
+      "utilities": 42249.19,
+      "repairs_maintenance": 69851.89,
+      "management_fee": 30292.65,
+      "general_admin": 11919.61,
+      "marketing": 6478.48,
+      "contract_services": 18408.41,
+      "other_income": 48892.98
+    }
+  },
+  "metrics": {
+    "gross_potential_rent": 1256210.88,
+    "effective_gross_income": 1179482.7719999999,
+    "underwritten_vacancy_rate": 0.1,
+    "operating_expenses": 398860.0231599999,
+    "noi": 773342.74884,
+    "annual_debt_service": 610713.39,
+    "dscr": 1.2662940775541207,
+    "debt_yield": 0.10593736285479452,
+    "ltv": 0.7978142076502732,
+    "breakeven_occupancy": 0.7705397625277693
+  },
+  "exceptions": [
+    "CP-3.1.3",
+    "CP-3.2.2"
+  ],
+  "label_categories": {
+    "Rental Income": "gross_potential_rent",
+    "Vacancy": "vacancy_loss",
+    "RE Taxes": "real_estate_taxes",
+    "Insurance Expense": "insurance",
+    "Utilities": "utilities",
+    "Common Area Electric": "utilities",
+    "Maintenance": "repairs_maintenance",
+    "Repairs & Maintenance": "repairs_maintenance",
+    "Property Management": "management_fee",
+    "G&A": "general_admin",
+    "Marketing": "marketing",
+    "Snow Removal": "contract_services",
+    "Storage Income": "other_income",
+    "Late Fees": "other_income"
+  }
+}

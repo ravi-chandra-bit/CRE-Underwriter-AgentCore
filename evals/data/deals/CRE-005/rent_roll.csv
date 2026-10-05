@@ -1,0 +1,15 @@
+Rent Roll - Industrial Property
+As of,08/31/2026
+
+Unit,Resident,RSF,Rent,Status,Lease End
+Suite 100,Tenant 3697,"18,000","$44,032.30",Occupied,2027-06-28
+Suite 110,Tenant 4694,"2,400","$6,330.80",Occupied,2028-09-28
+Suite 120,Tenant 2292,"12,000","$26,458.45",Occupied,2028-04-28
+Suite 130,Tenant 5496,"5,000","$12,484.76",Occupied,2027-11-28
+Suite 140,Tenant 9740,"3,200","$7,139.14",Occupied,2026-09-28
+Suite 150,Tenant 3526,"18,000","$45,814.13",Occupied,2027-11-28
+Suite 160,Tenant 6531,"12,000","$29,429.40",Occupied,2030-01-28
+Suite 170,Tenant 1464,"18,000","$47,427.97",Occupied,2026-01-28
+Suite 180,Tenant 5336,"5,000","$12,057.58",Occupied,2031-04-28
+Suite 190,Tenant 7825,"18,000","$39,524.98",Occupied,2030-11-28
+Total,,,"$270,699.51",,

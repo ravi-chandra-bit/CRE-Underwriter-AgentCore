@@ -1,0 +1,29 @@
+{
+  "extraction": {
+    "farm_financials": {
+      "annual_revenue": 1146339.99,
+      "annual_operating_expenses": 440851.59,
+      "opening_cash": 75613.48,
+      "operating_line_limit": 760000.0
+    }
+  },
+  "metrics": {
+    "base.tdcr": 2.443205689478004,
+    "base.peak_line_draw": 176650.29000000004,
+    "base.months_line_exceeded": 0,
+    "cash_available_for_debt_service": 595788.07,
+    "tdcr": 2.443205689478004,
+    "price_down_15.tdcr": 1.7741972608647119,
+    "price_down_15.peak_line_draw": 209278.50900000002,
+    "price_down_15.months_line_exceeded": 0,
+    "yield_down_20.tdcr": 1.5511944513269482,
+    "yield_down_20.peak_line_draw": 220154.582,
+    "yield_down_20.months_line_exceeded": 0,
+    "combined_downside.tdcr": 1.2686281867774074,
+    "combined_downside.peak_line_draw": 252806.64340000006,
+    "combined_downside.months_line_exceeded": 0,
+    "ltv": 0.5249266862170088,
+    "current_ratio": 2.064010382512913
+  },
+  "exceptions": []
+}

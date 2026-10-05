@@ -1,0 +1,22 @@
+# Deployment gates. `run_evals.py --gate` exits non-zero if any gate fails, which fails the
+# CI job and blocks the deploy stage. Offline gates are regression gates set at or just
+# below the committed baseline (evals/reports/baseline_offline.md); raise them as the
+# parser improves. Live gates apply to runs that call the model.
+offline:
+  min_extraction_accuracy: 0.975
+  min_metric_correctness: 0.89
+  min_exception_exact_match: 0.92
+  min_citation_faithfulness: 1.0
+  max_fabricated_anchors: 0
+  max_decision_language_hits: 0
+live:
+  # The agent maps long-tail T-12 labels the keyword table misses, so live gates sit above
+  # the offline baseline. Calibrate them from your first measured live run.
+  min_extraction_accuracy: 0.975
+  min_metric_correctness: 0.93
+  min_exception_exact_match: 0.92
+  min_citation_faithfulness: 0.98
+  max_fabricated_anchors: 0
+  max_decision_language_hits: 0
+  max_forbidden_tool_executions: 0
+  min_deals_completed_ratio: 0.95

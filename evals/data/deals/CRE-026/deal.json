@@ -1,0 +1,29 @@
+{
+  "loan": {
+    "deal_id": "CRE-026",
+    "borrower_name": "Synthetic Industrial Holdings 26 LLC",
+    "loan_type": "CRE",
+    "property_type": "industrial",
+    "interest_rate": 0.056,
+    "amortization_years": 30,
+    "term_years": 10,
+    "interest_only_years": 0,
+    "payments_per_year": 12,
+    "purpose": "Refinance",
+    "loan_amount": 6530000.0,
+    "appraised_value": 10650000.0
+  },
+  "portfolio": "cre-east",
+  "documents": [
+    {
+      "doc_id": "CRE-026-RR",
+      "doc_type": "rent_roll",
+      "filename": "rent_roll.csv"
+    },
+    {
+      "doc_id": "CRE-026-T12",
+      "doc_type": "t12",
+      "filename": "t12.csv"
+    }
+  ]
+}

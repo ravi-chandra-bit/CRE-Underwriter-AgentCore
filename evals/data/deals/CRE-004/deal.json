@@ -1,0 +1,29 @@
+{
+  "loan": {
+    "deal_id": "CRE-004",
+    "borrower_name": "Synthetic Office Holdings 4 LLC",
+    "loan_type": "CRE",
+    "property_type": "office",
+    "interest_rate": 0.0609,
+    "amortization_years": 25,
+    "term_years": 7,
+    "interest_only_years": 0,
+    "payments_per_year": 12,
+    "purpose": "Refinance",
+    "loan_amount": 2790000.0,
+    "appraised_value": 4630000.0
+  },
+  "portfolio": "cre-east",
+  "documents": [
+    {
+      "doc_id": "CRE-004-RR",
+      "doc_type": "rent_roll",
+      "filename": "rent_roll.csv"
+    },
+    {
+      "doc_id": "CRE-004-T12",
+      "doc_type": "t12",
+      "filename": "t12.csv"
+    }
+  ]
+}

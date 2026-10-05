@@ -1,0 +1,29 @@
+{
+  "loan": {
+    "deal_id": "CRE-006",
+    "borrower_name": "Synthetic Office Holdings 6 LLC",
+    "loan_type": "CRE",
+    "property_type": "office",
+    "interest_rate": 0.0747,
+    "amortization_years": 30,
+    "term_years": 10,
+    "interest_only_years": 0,
+    "payments_per_year": 12,
+    "purpose": "Cash-out refinance",
+    "loan_amount": 7300000.0,
+    "appraised_value": 9150000.0
+  },
+  "portfolio": "cre-east",
+  "documents": [
+    {
+      "doc_id": "CRE-006-RR",
+      "doc_type": "rent_roll",
+      "filename": "rent_roll.csv"
+    },
+    {
+      "doc_id": "CRE-006-T12",
+      "doc_type": "t12",
+      "filename": "t12.csv"
+    }
+  ]
+}

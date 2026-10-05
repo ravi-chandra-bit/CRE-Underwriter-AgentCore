@@ -1,0 +1,29 @@
+{
+  "loan": {
+    "deal_id": "CRE-021",
+    "borrower_name": "Synthetic Office Holdings 21 LLC",
+    "loan_type": "CRE",
+    "property_type": "office",
+    "interest_rate": 0.0602,
+    "amortization_years": 25,
+    "term_years": 10,
+    "interest_only_years": 0,
+    "payments_per_year": 12,
+    "purpose": "Acquisition",
+    "loan_amount": 3980000.0,
+    "appraised_value": 6620000.0
+  },
+  "portfolio": "cre-east",
+  "documents": [
+    {
+      "doc_id": "CRE-021-RR",
+      "doc_type": "rent_roll",
+      "filename": "rent_roll.csv"
+    },
+    {
+      "doc_id": "CRE-021-T12",
+      "doc_type": "t12",
+      "filename": "t12.csv"
+    }
+  ]
+}

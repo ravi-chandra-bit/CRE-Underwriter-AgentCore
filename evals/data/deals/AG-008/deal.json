@@ -1,0 +1,24 @@
+{
+  "loan": {
+    "deal_id": "AG-008",
+    "borrower_name": "Synthetic Farms 8 LLC",
+    "loan_type": "AGRI",
+    "property_type": "farmland",
+    "interest_rate": 0.0675,
+    "amortization_years": 25,
+    "term_years": 20,
+    "interest_only_years": 0,
+    "payments_per_year": 1,
+    "purpose": "Expansion acreage",
+    "loan_amount": 2040000.0,
+    "appraised_value": 4650000.0
+  },
+  "portfolio": "ag-plains",
+  "documents": [
+    {
+      "doc_id": "AG-008-FIN",
+      "doc_type": "farm_financials",
+      "filename": "farm_financials.csv"
+    }
+  ]
+}

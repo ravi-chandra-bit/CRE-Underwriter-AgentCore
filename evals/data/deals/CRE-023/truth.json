@@ -1,0 +1,56 @@
+{
+  "extraction": {
+    "rent_roll": {
+      "unit_count": 4,
+      "occupied_units": 4,
+      "in_place_annual_rent": 153007.08
+    },
+    "t12": {
+      "gross_potential_rent": 154685.11,
+      "vacancy_loss": 0.0,
+      "concessions": 1597.07,
+      "bad_debt": 497.96,
+      "real_estate_taxes": 18777.15,
+      "insurance": 6560.71,
+      "utilities": 10864.51,
+      "repairs_maintenance": 5523.02,
+      "management_fee": 6459.87,
+      "general_admin": 2253.09,
+      "marketing": 1513.23,
+      "contract_services": 3964.41,
+      "other_income": 4929.78
+    }
+  },
+  "metrics": {
+    "gross_potential_rent": 153007.08000000002,
+    "effective_gross_income": 150286.506,
+    "underwritten_vacancy_rate": 0.05,
+    "operating_expenses": 55915.99,
+    "noi": 92810.516,
+    "annual_debt_service": 75781.31,
+    "dscr": 1.2247151177513296,
+    "debt_yield": 0.0956809443298969,
+    "ltv": 0.5914634146341463,
+    "breakeven_occupancy": 0.8387031502071667
+  },
+  "exceptions": [
+    "CP-3.1.1"
+  ],
+  "label_categories": {
+    "Gross Potential Rent": "gross_potential_rent",
+    "Less: Vacancy": "vacancy_loss",
+    "Concessions": "concessions",
+    "Uncollectible Rent": "bad_debt",
+    "Real Estate Taxes": "real_estate_taxes",
+    "Property Insurance": "insurance",
+    "Gas": "utilities",
+    "Electric": "utilities",
+    "Turnover Costs": "repairs_maintenance",
+    "Property Management": "management_fee",
+    "Legal & Accounting": "general_admin",
+    "Marketing": "marketing",
+    "Janitorial": "contract_services",
+    "Admin Fees": "other_income",
+    "Other Income": "other_income"
+  }
+}

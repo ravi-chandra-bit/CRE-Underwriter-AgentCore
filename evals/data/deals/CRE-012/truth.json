@@ -1,0 +1,55 @@
+{
+  "extraction": {
+    "rent_roll": {
+      "unit_count": 10,
+      "occupied_units": 10,
+      "in_place_annual_rent": 2343597.36
+    },
+    "t12": {
+      "gross_potential_rent": 2355086.64,
+      "vacancy_loss": 0.0,
+      "real_estate_taxes": 275957.41,
+      "insurance": 59351.17,
+      "utilities": 174594.69,
+      "repairs_maintenance": 93061.56,
+      "management_fee": 81772.28,
+      "general_admin": 32284.81,
+      "marketing": 13826.85,
+      "contract_services": 27290.98,
+      "other_income": 77834.76,
+      "capital_expenditures": 89393.6
+    }
+  },
+  "metrics": {
+    "gross_potential_rent": 2343597.36,
+    "effective_gross_income": 2187072.3839999996,
+    "underwritten_vacancy_rate": 0.1,
+    "operating_expenses": 758139.75,
+    "noi": 1414232.6339999996,
+    "annual_debt_service": 1250864.35,
+    "dscr": 1.1306043169269309,
+    "debt_yield": 0.10123354574087327,
+    "ltv": 0.7375923970432946,
+    "breakeven_occupancy": 0.8302916589733658
+  },
+  "exceptions": [
+    "CP-3.1.3",
+    "CP-3.2.2"
+  ],
+  "label_categories": {
+    "Rental Income": "gross_potential_rent",
+    "Vacancy": "vacancy_loss",
+    "Property Taxes": "real_estate_taxes",
+    "Insurance": "insurance",
+    "Utilities": "utilities",
+    "Trash Removal": "utilities",
+    "Repairs & Maintenance": "repairs_maintenance",
+    "Property Management": "management_fee",
+    "G&A": "general_admin",
+    "Marketing & Promotion": "marketing",
+    "Janitorial": "contract_services",
+    "Pet Fees": "other_income",
+    "Other Income": "other_income",
+    "Capital Improvements": "capital_expenditures"
+  }
+}

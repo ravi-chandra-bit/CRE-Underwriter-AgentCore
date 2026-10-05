@@ -1,0 +1,9 @@
+# USD per 1,000 tokens, used to attribute an estimated cost to each underwriting run.
+# Values below are Anthropic first-party list prices for Claude Opus 5.5 ($4 / $20 per 1M).
+# Claude on Amazon Bedrock is partner-priced and can differ by region: copy the current
+# on-demand price from https://aws.amazon.com/bedrock/pricing/ before quoting a cost figure.
+currency: USD
+models:
+  default:
+    input_per_1k: 0.004
+    output_per_1k: 0.020

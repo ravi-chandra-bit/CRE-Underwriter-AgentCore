@@ -1,0 +1,13 @@
+Rent Roll - Retail Property
+As of,08/31/2026
+
+Unit No,Tenant,RSF,Annual Base Rent,Status,Exp. Date
+Suite 100,,"18,000","$349,387.80",V,
+Suite 110,,"8,000","$151,116.00",Vacant,
+Suite 120,Tenant 8802,"12,000","$213,756.24",Occupied,2027-08-28
+Suite 130,VACANT,"12,000","$208,057.80",VACANT,
+Suite 140,Tenant 7598,"3,200","$58,623.60",Occupied,2030-09-28
+Suite 150,Tenant 7468,"2,400","$46,653.12",Occupied,2028-10-28
+Suite 160,Tenant 7937,"3,200","$57,897.36",Occupied,2029-12-28
+Suite 170,Tenant 9020,"2,400","$45,678.48",Occupied,2031-07-28
+Total,,,"$1,131,170.40",,

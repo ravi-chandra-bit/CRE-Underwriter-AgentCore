@@ -1,0 +1,56 @@
+{
+  "extraction": {
+    "rent_roll": {
+      "unit_count": 34,
+      "occupied_units": 32,
+      "in_place_annual_rent": 636072.0
+    },
+    "t12": {
+      "gross_potential_rent": 676020.64,
+      "vacancy_loss": 40723.09,
+      "bad_debt": 1984.85,
+      "real_estate_taxes": 73481.27,
+      "insurance": 21612.36,
+      "utilities": 36145.36,
+      "repairs_maintenance": 39220.46,
+      "management_fee": 16678.81,
+      "general_admin": 8457.86,
+      "marketing": 3582.8,
+      "contract_services": 12497.95,
+      "payroll": 44299.89,
+      "other_income": 12984.17,
+      "debt_service": 43350.33,
+      "depreciation_amortization": 47386.63
+    }
+  },
+  "metrics": {
+    "gross_potential_rent": 675852.0,
+    "effective_gross_income": 646138.8839158355,
+    "underwritten_vacancy_rate": 0.06317549712683328,
+    "operating_expenses": 258682.11651747502,
+    "noi": 377256.76739836053,
+    "annual_debt_service": 259373.28,
+    "dscr": 1.4544935677196993,
+    "debt_yield": 0.11128518212341018,
+    "ltv": 0.7290322580645161,
+    "breakeven_occupancy": 0.7624024587002406
+  },
+  "exceptions": [],
+  "label_categories": {
+    "Scheduled Rent": "gross_potential_rent",
+    "Vacancy Loss": "vacancy_loss",
+    "Uncollectible Rent": "bad_debt",
+    "Property Taxes": "real_estate_taxes",
+    "Insurance": "insurance",
+    "Water & Sewer": "utilities",
+    "Maintenance": "repairs_maintenance",
+    "Management Fee": "management_fee",
+    "Office Expense": "general_admin",
+    "Marketing": "marketing",
+    "Pest Control": "contract_services",
+    "On-Site Payroll": "payroll",
+    "Late Fees": "other_income",
+    "Debt Service": "debt_service",
+    "Depreciation & Amortization": "depreciation_amortization"
+  }
+}

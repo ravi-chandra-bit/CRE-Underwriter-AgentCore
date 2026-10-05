@@ -1,0 +1,24 @@
+{
+  "loan": {
+    "deal_id": "AG-005",
+    "borrower_name": "Synthetic Farms 5 LLC",
+    "loan_type": "AGRI",
+    "property_type": "farmland",
+    "interest_rate": 0.074,
+    "amortization_years": 30,
+    "term_years": 20,
+    "interest_only_years": 0,
+    "payments_per_year": 1,
+    "purpose": "Farmland purchase",
+    "loan_amount": 2760000.0,
+    "appraised_value": 5830000.0
+  },
+  "portfolio": "ag-midwest",
+  "documents": [
+    {
+      "doc_id": "AG-005-FIN",
+      "doc_type": "farm_financials",
+      "filename": "farm_financials.csv"
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+[
+  {
+    "name": "get_deal_package",
+    "description": "Return the loan request summary and the list of documents on file for a deal.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "portfolio": {
+          "type": "string",
+          "description": "Portfolio the signed-in user is entitled to; must match the deal."
+        },
+        "deal_id": {
+          "type": "string",
+          "description": "Deal identifier, e.g. CRE-001 or AG-004."
+        }
+      },
+      "required": [
+        "deal_id",
+        "portfolio"
+      ]
+    }
+  },
+  {
+    "name": "extract_document",
+    "description": "Parse a source document (rent roll, T-12 or farm financials) and return aggregate figures, warnings and unmapped T-12 labels.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "portfolio": {
+          "type": "string",
+          "description": "Portfolio the signed-in user is entitled to; must match the deal."
+        },
+        "deal_id": {
+          "type": "string",
+          "description": "Deal identifier, e.g. CRE-001 or AG-004."
+        },
+        "doc_id": {
+          "type": "string",
+          "description": "Document identifier from get_deal_package."
+        }
+      },
+      "required": [
+        "deal_id",
+        "portfolio",
+        "doc_id"
+      ]
+    }
+  },
+  {
+    "name": "map_t12_label",
+    "description": "Assign a canonical category to a T-12 line item the parser could not map, with a rationale shown to the analyst, then re-extract.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "portfolio": {
+          "type": "string",
+          "description": "Portfolio the signed-in user is entitled to; must match the deal."
+        },
+        "deal_id": {
+          "type": "string",
+          "description": "Deal identifier, e.g. CRE-001 or AG-004."
+        },
+        "doc_id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string",
+          "description": "Canonical T-12 category, e.g. other_income, real_estate_taxes."
+        },
+        "rationale": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "deal_id",
+        "portfolio",
+        "doc_id",
+        "label",
+        "category",
+        "rationale"
+      ]
+    }
+  },
+  {
+    "name": "submit_memo_for_analyst_review",
+    "description": "File a verified draft memo in the credit analyst's review queue. Requires human approval. This is not a credit decision.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "portfolio": {
+          "type": "string",
+          "description": "Portfolio the signed-in user is entitled to; must match the deal."
+        },
+        "deal_id": {
+          "type": "string",
+          "description": "Deal identifier, e.g. CRE-001 or AG-004."
+        },
+        "memo_markdown": {
+          "type": "string",
+          "description": "Full memo in Markdown."
+        }
+      },
+      "required": [
+        "deal_id",
+        "portfolio",
+        "memo_markdown"
+      ]
+    }
+  },
+  {
+    "name": "record_credit_decision",
+    "description": "HUMAN-ONLY: record a final credit decision in the loan origination system. Forbidden to the agent by AgentCore Policy.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "portfolio": {
+          "type": "string",
+          "description": "Portfolio the signed-in user is entitled to; must match the deal."
+        },
+        "deal_id": {
+          "type": "string",
+          "description": "Deal identifier, e.g. CRE-001 or AG-004."
+        },
+        "decision": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "deal_id",
+        "portfolio",
+        "decision"
+      ]
+    }
+  },
+  {
+    "name": "send_adverse_action_notice",
+    "description": "HUMAN-ONLY: send an ECOA/Reg B adverse action notice. Forbidden to the agent by AgentCore Policy.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "portfolio": {
+          "type": "string",
+          "description": "Portfolio the signed-in user is entitled to; must match the deal."
+        },
+        "deal_id": {
+          "type": "string",
+          "description": "Deal identifier, e.g. CRE-001 or AG-004."
+        },
+        "reasons": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "deal_id",
+        "portfolio",
+        "reasons"
+      ]
+    }
+  }
+]

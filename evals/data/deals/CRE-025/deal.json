@@ -1,0 +1,29 @@
+{
+  "loan": {
+    "deal_id": "CRE-025",
+    "borrower_name": "Synthetic Multifamily Holdings 25 LLC",
+    "loan_type": "CRE",
+    "property_type": "multifamily",
+    "interest_rate": 0.0581,
+    "amortization_years": 30,
+    "term_years": 7,
+    "interest_only_years": 0,
+    "payments_per_year": 12,
+    "purpose": "Acquisition",
+    "loan_amount": 4490000.0,
+    "appraised_value": 8100000.0
+  },
+  "portfolio": "cre-west",
+  "documents": [
+    {
+      "doc_id": "CRE-025-RR",
+      "doc_type": "rent_roll",
+      "filename": "rent_roll.csv"
+    },
+    {
+      "doc_id": "CRE-025-T12",
+      "doc_type": "t12",
+      "filename": "t12.csv"
+    }
+  ]
+}

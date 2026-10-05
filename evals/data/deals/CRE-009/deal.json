@@ -1,0 +1,29 @@
+{
+  "loan": {
+    "deal_id": "CRE-009",
+    "borrower_name": "Synthetic Retail Holdings 9 LLC",
+    "loan_type": "CRE",
+    "property_type": "retail",
+    "interest_rate": 0.0603,
+    "amortization_years": 25,
+    "term_years": 10,
+    "interest_only_years": 0,
+    "payments_per_year": 12,
+    "purpose": "Refinance",
+    "loan_amount": 7900000.0,
+    "appraised_value": 13050000.0
+  },
+  "portfolio": "cre-west",
+  "documents": [
+    {
+      "doc_id": "CRE-009-RR",
+      "doc_type": "rent_roll",
+      "filename": "rent_roll.csv"
+    },
+    {
+      "doc_id": "CRE-009-T12",
+      "doc_type": "t12",
+      "filename": "t12.csv"
+    }
+  ]
+}

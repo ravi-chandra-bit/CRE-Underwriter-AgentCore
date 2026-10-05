@@ -1,0 +1,24 @@
+{
+  "loan": {
+    "deal_id": "AG-010",
+    "borrower_name": "Synthetic Farms 10 LLC",
+    "loan_type": "AGRI",
+    "property_type": "farmland",
+    "interest_rate": 0.0786,
+    "amortization_years": 20,
+    "term_years": 20,
+    "interest_only_years": 0,
+    "payments_per_year": 1,
+    "purpose": "Refinance farm real estate",
+    "loan_amount": 500000.0,
+    "appraised_value": 730000.0
+  },
+  "portfolio": "ag-plains",
+  "documents": [
+    {
+      "doc_id": "AG-010-FIN",
+      "doc_type": "farm_financials",
+      "filename": "farm_financials.csv"
+    }
+  ]
+}

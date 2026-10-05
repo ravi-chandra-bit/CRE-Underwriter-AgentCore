@@ -1,0 +1,13 @@
+Space,Resident,RSF,Current Rent/Mo,Occupancy,Lease End
+Suite 100,Tenant 2381,"3,200",3647.55,Occupied,2030-11-28
+Suite 110,Tenant 5059,"1,500",1649.81,Occupied,2031-08-28
+Suite 120,Tenant 9586,"18,000",17664.41,Occupied,2030-10-28
+Suite 130,Tenant 7108,"8,000",8563.66,Occupied,2028-07-28
+Suite 140,Tenant 6543,"5,000",5430.60,Occupied,2031-10-28
+Suite 150,,"18,000",20160.46,Vacant,
+Suite 160,Tenant 6482,"1,500",1587.30,Occupied,2026-06-28
+Suite 170,Vacant,"18,000",19516.79,Vacant,
+Suite 180,Tenant 5655,"2,400",2473.90,Occupied,2028-12-28
+Suite 190,Tenant 3463,"5,000",5346.19,Occupied,2028-02-28
+Suite 200,Tenant 3317,"1,500",1587.55,Occupied,2028-05-28
+Total,,,87628.22,,

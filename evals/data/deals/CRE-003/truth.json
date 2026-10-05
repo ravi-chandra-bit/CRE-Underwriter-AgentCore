@@ -1,0 +1,55 @@
+{
+  "extraction": {
+    "rent_roll": {
+      "unit_count": 5,
+      "occupied_units": 5,
+      "in_place_annual_rent": 893408.76
+    },
+    "t12": {
+      "gross_potential_rent": 898247.6,
+      "vacancy_loss": 0.0,
+      "real_estate_taxes": 86082.48,
+      "insurance": 23881.83,
+      "utilities": 28618.71,
+      "repairs_maintenance": 62731.0,
+      "management_fee": 20572.58,
+      "general_admin": 9716.88,
+      "marketing": 6074.69,
+      "contract_services": 15964.48,
+      "other_income": 7048.66,
+      "capital_expenditures": 29396.36,
+      "debt_service": 35939.38,
+      "depreciation_amortization": 62687.86
+    }
+  },
+  "metrics": {
+    "gross_potential_rent": 893408.7600000001,
+    "effective_gross_income": 837918.8068000001,
+    "underwritten_vacancy_rate": 0.07,
+    "operating_expenses": 258207.634204,
+    "noi": 571931.1725960001,
+    "annual_debt_service": 375213.87,
+    "dscr": 1.5242804659539908,
+    "debt_yield": 0.1355287138853081,
+    "ltv": 0.7104377104377104,
+    "breakeven_occupancy": 0.7098126553001337
+  },
+  "exceptions": [],
+  "label_categories": {
+    "Gross Rents": "gross_potential_rent",
+    "Physical Vacancy": "vacancy_loss",
+    "Property Taxes": "real_estate_taxes",
+    "Insurance Expense": "insurance",
+    "Water & Sewer": "utilities",
+    "Utilities": "utilities",
+    "Turnover Costs": "repairs_maintenance",
+    "Property Management": "management_fee",
+    "Office Expense": "general_admin",
+    "Marketing & Promotion": "marketing",
+    "Snow Removal": "contract_services",
+    "Pet Fees": "other_income",
+    "Capital Expenditures": "capital_expenditures",
+    "Interest Expense": "debt_service",
+    "Depreciation": "depreciation_amortization"
+  }
+}

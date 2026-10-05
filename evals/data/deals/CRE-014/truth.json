@@ -1,0 +1,53 @@
+{
+  "extraction": {
+    "rent_roll": {
+      "unit_count": 10,
+      "occupied_units": 9,
+      "in_place_annual_rent": 957278.16
+    },
+    "t12": {
+      "gross_potential_rent": 1124439.82,
+      "vacancy_loss": 146460.12,
+      "concessions": 5950.58,
+      "real_estate_taxes": 131854.19,
+      "insurance": 46035.07,
+      "utilities": 46906.9,
+      "repairs_maintenance": 32659.14,
+      "management_fee": 35031.02,
+      "general_admin": 16453.42,
+      "marketing": 3891.97,
+      "contract_services": 13556.61,
+      "depreciation_amortization": 83692.88
+    }
+  },
+  "metrics": {
+    "gross_potential_rent": 1139175.3599999999,
+    "effective_gross_income": 957278.16,
+    "underwritten_vacancy_rate": 0.15967445082379583,
+    "operating_expenses": 326388.31999999995,
+    "noi": 616209.8400000001,
+    "annual_debt_service": 431082.01,
+    "dscr": 1.42944921315552,
+    "debt_yield": 0.12398588329979882,
+    "ltv": 0.7939297124600639,
+    "breakeven_occupancy": 0.6778151609599421
+  },
+  "exceptions": [
+    "CP-3.2.1"
+  ],
+  "label_categories": {
+    "Contract Rent": "gross_potential_rent",
+    "Physical Vacancy": "vacancy_loss",
+    "Loss to Lease": "concessions",
+    "Taxes - Real Estate": "real_estate_taxes",
+    "Property Insurance": "insurance",
+    "Water & Sewer": "utilities",
+    "Repairs & Maintenance": "repairs_maintenance",
+    "R&M": "repairs_maintenance",
+    "Mgmt Fees": "management_fee",
+    "Legal & Accounting": "general_admin",
+    "Marketing & Promotion": "marketing",
+    "Contract Services": "contract_services",
+    "Depreciation": "depreciation_amortization"
+  }
+}

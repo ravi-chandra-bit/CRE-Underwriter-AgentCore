@@ -1,0 +1,112 @@
+[
+  {
+    "name": "compute_cre_metrics",
+    "description": "Compute underwritten NOI, DSCR, debt yield, LTV, breakeven occupancy and maximum loan sizing for a CRE deal from its extracted rent roll and T-12. Returns figures with citation anchors.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "portfolio": {
+          "type": "string",
+          "description": "Portfolio the signed-in user is entitled to; must match the deal."
+        },
+        "deal_id": {
+          "type": "string",
+          "description": "Deal identifier, e.g. CRE-001 or AG-004."
+        }
+      },
+      "required": [
+        "deal_id",
+        "portfolio"
+      ]
+    }
+  },
+  {
+    "name": "compute_farm_cash_flow_stress",
+    "description": "Compute farm cash available for debt service, term debt coverage, LTV, liquidity and a month-by-month seasonal cash-flow stress test for an agricultural deal.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "portfolio": {
+          "type": "string",
+          "description": "Portfolio the signed-in user is entitled to; must match the deal."
+        },
+        "deal_id": {
+          "type": "string",
+          "description": "Deal identifier, e.g. CRE-001 or AG-004."
+        }
+      },
+      "required": [
+        "deal_id",
+        "portfolio"
+      ]
+    }
+  },
+  {
+    "name": "check_credit_policy",
+    "description": "Compare computed metrics with credit policy and return flagged exceptions with rule ids. Flags are for analyst review, not a decision.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "portfolio": {
+          "type": "string",
+          "description": "Portfolio the signed-in user is entitled to; must match the deal."
+        },
+        "deal_id": {
+          "type": "string",
+          "description": "Deal identifier, e.g. CRE-001 or AG-004."
+        }
+      },
+      "required": [
+        "deal_id",
+        "portfolio"
+      ]
+    }
+  },
+  {
+    "name": "get_evidence",
+    "description": "List every citable figure for the deal with its citation anchor and value.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "portfolio": {
+          "type": "string",
+          "description": "Portfolio the signed-in user is entitled to; must match the deal."
+        },
+        "deal_id": {
+          "type": "string",
+          "description": "Deal identifier, e.g. CRE-001 or AG-004."
+        }
+      },
+      "required": [
+        "deal_id",
+        "portfolio"
+      ]
+    }
+  },
+  {
+    "name": "verify_memo_citations",
+    "description": "Check that every number in a memo draft is cited and matches the cited figure, and that the memo contains no credit-decision language.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "portfolio": {
+          "type": "string",
+          "description": "Portfolio the signed-in user is entitled to; must match the deal."
+        },
+        "deal_id": {
+          "type": "string",
+          "description": "Deal identifier, e.g. CRE-001 or AG-004."
+        },
+        "memo_markdown": {
+          "type": "string",
+          "description": "Full memo in Markdown."
+        }
+      },
+      "required": [
+        "deal_id",
+        "portfolio",
+        "memo_markdown"
+      ]
+    }
+  }
+]

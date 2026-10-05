@@ -1,0 +1,57 @@
+{
+  "extraction": {
+    "rent_roll": {
+      "unit_count": 72,
+      "occupied_units": 67,
+      "in_place_annual_rent": 1416012.0
+    },
+    "t12": {
+      "gross_potential_rent": 1505414.05,
+      "vacancy_loss": 114286.12,
+      "concessions": 12074.86,
+      "real_estate_taxes": 152258.46,
+      "insurance": 78773.4,
+      "utilities": 56095.82,
+      "repairs_maintenance": 90170.08,
+      "management_fee": 38595.36,
+      "general_admin": 24782.6,
+      "marketing": 10647.07,
+      "contract_services": 18328.98,
+      "payroll": 115468.7,
+      "other_income": 31018.22,
+      "debt_service": 93213.26,
+      "depreciation_amortization": 86839.8
+    }
+  },
+  "metrics": {
+    "gross_potential_rent": 1512000.0,
+    "effective_gross_income": 1416104.4305611409,
+    "underwritten_vacancy_rate": 0.08393769142781682,
+    "operating_expenses": 589008.2429168342,
+    "noi": 805496.1876443067,
+    "annual_debt_service": 489195.69,
+    "dscr": 1.646572535510905,
+    "debt_yield": 0.1428184729865792,
+    "ltv": 0.6988847583643123,
+    "breakeven_occupancy": 0.706868857749229
+  },
+  "exceptions": [],
+  "label_categories": {
+    "Rental Income": "gross_potential_rent",
+    "Physical Vacancy": "vacancy_loss",
+    "Concessions": "concessions",
+    "Taxes - Real Estate": "real_estate_taxes",
+    "Property Insurance": "insurance",
+    "Water & Sewer": "utilities",
+    "Turnover Costs": "repairs_maintenance",
+    "Management Fee": "management_fee",
+    "Office Expense": "general_admin",
+    "Advertising": "marketing",
+    "Pest Control": "contract_services",
+    "Salaries & Wages": "payroll",
+    "Admin Fees": "other_income",
+    "Parking Income": "other_income",
+    "Debt Service": "debt_service",
+    "Depreciation": "depreciation_amortization"
+  }
+}

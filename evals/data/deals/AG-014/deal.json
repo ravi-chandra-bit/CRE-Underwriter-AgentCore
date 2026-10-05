@@ -1,0 +1,24 @@
+{
+  "loan": {
+    "deal_id": "AG-014",
+    "borrower_name": "Synthetic Farms 14 LLC",
+    "loan_type": "AGRI",
+    "property_type": "farmland",
+    "interest_rate": 0.0705,
+    "amortization_years": 25,
+    "term_years": 20,
+    "interest_only_years": 0,
+    "payments_per_year": 1,
+    "purpose": "Expansion acreage",
+    "loan_amount": 2930000.0,
+    "appraised_value": 5020000.0
+  },
+  "portfolio": "ag-midwest",
+  "documents": [
+    {
+      "doc_id": "AG-014-FIN",
+      "doc_type": "farm_financials",
+      "filename": "farm_financials.csv"
+    }
+  ]
+}

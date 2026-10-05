@@ -1,0 +1,64 @@
+{
+  "extraction": {
+    "rent_roll": {
+      "unit_count": 48,
+      "occupied_units": 38,
+      "in_place_annual_rent": 810084.0
+    },
+    "t12": {
+      "gross_potential_rent": 1024317.71,
+      "vacancy_loss": 182303.87,
+      "concessions": 15017.71,
+      "bad_debt": 2156.21,
+      "real_estate_taxes": 84880.7,
+      "insurance": 45172.27,
+      "utilities": 33171.87,
+      "repairs_maintenance": 28781.2,
+      "management_fee": 21232.67,
+      "general_admin": 12702.85,
+      "marketing": 5636.03,
+      "contract_services": 22876.82,
+      "payroll": 76134.49,
+      "other_income": 23492.55,
+      "capital_expenditures": 26497.83,
+      "depreciation_amortization": 32129.75
+    }
+  },
+  "metrics": {
+    "gross_potential_rent": 1014768.0,
+    "effective_gross_income": 833576.55,
+    "underwritten_vacancy_rate": 0.20170521735017266,
+    "operating_expenses": 334363.52650000004,
+    "noi": 484813.0235,
+    "annual_debt_service": 434285.9,
+    "dscr": 1.1163453004115491,
+    "debt_yield": 0.0875113760830325,
+    "ltv": 0.5635808748728383,
+    "breakeven_occupancy": 0.7485029844259969
+  },
+  "exceptions": [
+    "CP-3.1.2",
+    "CP-3.3.1"
+  ],
+  "label_categories": {
+    "Scheduled Rent": "gross_potential_rent",
+    "Vacancy Loss": "vacancy_loss",
+    "Concessions": "concessions",
+    "Collection Loss": "bad_debt",
+    "Property Taxes": "real_estate_taxes",
+    "Insurance": "insurance",
+    "Trash Removal": "utilities",
+    "Utilities": "utilities",
+    "R&M": "repairs_maintenance",
+    "Repairs & Maintenance": "repairs_maintenance",
+    "Management Fee": "management_fee",
+    "Professional Fees": "general_admin",
+    "Advertising": "marketing",
+    "Contract Services": "contract_services",
+    "Payroll": "payroll",
+    "Storage Income": "other_income",
+    "Pet Fees": "other_income",
+    "CapEx - Roof": "capital_expenditures",
+    "Depreciation & Amortization": "depreciation_amortization"
+  }
+}

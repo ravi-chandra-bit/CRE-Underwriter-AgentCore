@@ -1,0 +1,94 @@
+name: Deploy
+
+# Staging deploy -> seed -> live evaluation + red team against the deployed endpoint.
+# If any gate fails, the staging endpoint is rolled back and production is not touched.
+# Production requires a manual approval on the `production` GitHub environment.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write   # GitHub OIDC -> AWS IAM role, no long-lived keys
+
+concurrency: deploy
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci.yml
+
+  staging:
+    needs: ci
+    runs-on: ubuntu-latest
+    environment: staging
+    env:
+      AWS_REGION: ${{ vars.AWS_REGION || 'us-east-1' }}
+      STAGE: staging
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: docker/setup-qemu-action@v3      # AgentCore Runtime containers are linux/arm64
+      - uses: docker/setup-buildx-action@v3
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+      - name: Install
+        run: |
+          pip install -e ".[agent,dev]"
+          pip install -r infra/requirements.txt
+      - name: Deploy staging
+        working-directory: infra
+        run: npx --yes aws-cdk@2 deploy --require-approval never -c stage=staging -c model_id=${{ vars.BEDROCK_MODEL_ID }} --outputs-file outputs.json
+      - name: Seed synthetic deals
+        run: python -m scripts.seed data
+      - name: Live evaluation + red team (gate)
+        id: eval
+        run: python -m evals.run_evals --mode remote --gate --redteam
+        env:
+          UW_USERNAME: ${{ secrets.UW_EVAL_USERNAME }}
+          UW_PASSWORD: ${{ secrets.UW_EVAL_PASSWORD }}
+      - name: Roll back staging on failed gate
+        if: failure() && steps.eval.outcome == 'failure'
+        run: python -m scripts.rollback --previous
+      - name: Publish eval report
+        if: always()
+        run: cat evals/reports/latest_remote.md >> "$GITHUB_STEP_SUMMARY" || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-remote-staging
+          path: evals/reports/
+
+  production:
+    needs: staging
+    runs-on: ubuntu-latest
+    environment: production   # configure required reviewers on this environment
+    env:
+      AWS_REGION: ${{ vars.AWS_REGION || 'us-east-1' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: docker/setup-qemu-action@v3
+      - uses: docker/setup-buildx-action@v3
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+      - name: Deploy production
+        working-directory: infra
+        run: |
+          pip install -r requirements.txt
+          npx --yes aws-cdk@2 deploy --require-approval never -c stage=prod -c model_id=${{ vars.BEDROCK_MODEL_ID }} --outputs-file outputs.json

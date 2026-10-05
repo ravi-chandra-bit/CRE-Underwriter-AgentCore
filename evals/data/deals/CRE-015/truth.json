@@ -1,0 +1,52 @@
+{
+  "extraction": {
+    "rent_roll": {
+      "unit_count": 12,
+      "occupied_units": 12,
+      "in_place_annual_rent": 1364494.56
+    },
+    "t12": {
+      "gross_potential_rent": 1353205.79,
+      "vacancy_loss": 0.0,
+      "bad_debt": 6459.67,
+      "real_estate_taxes": 151820.22,
+      "insurance": 64363.82,
+      "utilities": 60320.28,
+      "repairs_maintenance": 44003.52,
+      "management_fee": 56557.02,
+      "general_admin": 14598.3,
+      "marketing": 13034.27,
+      "contract_services": 30979.54,
+      "capital_expenditures": 30405.3
+    }
+  },
+  "metrics": {
+    "gross_potential_rent": 1364494.5599999998,
+    "effective_gross_income": 1296269.8319999997,
+    "underwritten_vacancy_rate": 0.05,
+    "operating_expenses": 435676.97000000003,
+    "noi": 849472.8619999997,
+    "annual_debt_service": 519283.8,
+    "dscr": 1.6358547329995654,
+    "debt_yield": 0.1265980420268256,
+    "ltv": 0.5901495162708883,
+    "breakeven_occupancy": 0.7080136471925547
+  },
+  "exceptions": [],
+  "label_categories": {
+    "Base Rent": "gross_potential_rent",
+    "Vacancy": "vacancy_loss",
+    "Collection Loss": "bad_debt",
+    "Property Taxes": "real_estate_taxes",
+    "Property Insurance": "insurance",
+    "Water & Sewer": "utilities",
+    "Utilities": "utilities",
+    "Make Ready": "repairs_maintenance",
+    "R&M": "repairs_maintenance",
+    "Property Management": "management_fee",
+    "G&A": "general_admin",
+    "Marketing & Promotion": "marketing",
+    "Landscaping": "contract_services",
+    "Capital Expenditures": "capital_expenditures"
+  }
+}

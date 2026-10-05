@@ -1,0 +1,57 @@
+# Synthetic credit policy used by the underwriting assistant.
+# Rule ids are cited in the memo and in policy-exception output so an analyst can
+# trace every flag back to a policy section. Values are illustrative, not any bank's policy.
+version: "2026.1-synthetic"
+
+underwriting_conventions:
+  # Underwritten vacancy = max(actual vacancy, floor for property type)
+  vacancy_floor:
+    multifamily: 0.05
+    retail: 0.07
+    office: 0.10
+    industrial: 0.05
+  # Management fee = max(actual, floor % of EGI)
+  management_fee_floor: 0.03
+  # Replacement reserves per unit per year (multifamily) or per square foot (commercial)
+  reserves_per_unit: 300
+  reserves_per_sf: 0.20
+  # Sizing constraints used to compute maximum supportable loan
+  sizing:
+    min_dscr: 1.25
+    max_ltv: 0.75
+    min_debt_yield: 0.09
+
+agri_conventions:
+  stress_scenarios:
+    - {name: base}
+    - {name: price_down_15, crop_price_shock: -0.15}
+    - {name: yield_down_20, yield_shock: -0.20}
+    - {name: combined_downside, crop_price_shock: -0.10, yield_shock: -0.10, input_cost_shock: 0.10, rate_shock_bps: 200}
+
+rules:
+  cre:
+    - {id: CP-3.1.1, metric: dscr, comparator: ">=", limit: 1.25, severity: major,
+       description: "Minimum underwritten DSCR"}
+    - {id: CP-3.1.2, metric: dscr, comparator: ">=", limit: 1.20, severity: major, property_types: [multifamily],
+       description: "Minimum underwritten DSCR (multifamily)"}
+    - {id: CP-3.1.3, metric: dscr, comparator: ">=", limit: 1.35, severity: major, property_types: [office],
+       description: "Minimum underwritten DSCR (office)"}
+    - {id: CP-3.2.1, metric: ltv, comparator: "<=", limit: 0.75, severity: major,
+       description: "Maximum loan-to-value"}
+    - {id: CP-3.2.2, metric: ltv, comparator: "<=", limit: 0.65, severity: major, property_types: [office],
+       description: "Maximum loan-to-value (office)"}
+    - {id: CP-3.3.1, metric: debt_yield, comparator: ">=", limit: 0.09, severity: minor,
+       description: "Minimum debt yield"}
+    - {id: CP-3.4.1, metric: breakeven_occupancy, comparator: "<=", limit: 0.85, severity: minor,
+       description: "Maximum breakeven occupancy"}
+  agri:
+    - {id: CP-5.1.1, metric: tdcr, comparator: ">=", limit: 1.25, severity: major,
+       description: "Minimum term debt coverage ratio (base case)"}
+    - {id: CP-5.1.2, metric: stressed_tdcr, comparator: ">=", limit: 1.00, severity: major,
+       description: "Minimum term debt coverage under combined downside stress"}
+    - {id: CP-5.2.1, metric: ltv, comparator: "<=", limit: 0.65, severity: major,
+       description: "Maximum loan-to-value on farmland"}
+    - {id: CP-5.3.1, metric: current_ratio, comparator: ">=", limit: 1.30, severity: minor,
+       description: "Minimum current ratio"}
+    - {id: CP-5.4.1, metric: months_line_exceeded, comparator: "<=", limit: 0, severity: major,
+       description: "Seasonal cash need must stay within operating line (base case)"}

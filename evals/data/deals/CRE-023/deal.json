@@ -1,0 +1,29 @@
+{
+  "loan": {
+    "deal_id": "CRE-023",
+    "borrower_name": "Synthetic Industrial Holdings 23 LLC",
+    "loan_type": "CRE",
+    "property_type": "industrial",
+    "interest_rate": 0.0611,
+    "amortization_years": 25,
+    "term_years": 5,
+    "interest_only_years": 0,
+    "payments_per_year": 12,
+    "purpose": "Acquisition",
+    "loan_amount": 970000.0,
+    "appraised_value": 1640000.0
+  },
+  "portfolio": "cre-east",
+  "documents": [
+    {
+      "doc_id": "CRE-023-RR",
+      "doc_type": "rent_roll",
+      "filename": "rent_roll.csv"
+    },
+    {
+      "doc_id": "CRE-023-T12",
+      "doc_type": "t12",
+      "filename": "t12.csv"
+    }
+  ]
+}

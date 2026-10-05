@@ -1,0 +1,55 @@
+{
+  "extraction": {
+    "rent_roll": {
+      "unit_count": 5,
+      "occupied_units": 4,
+      "in_place_annual_rent": 349337.28
+    },
+    "t12": {
+      "gross_potential_rent": 561777.5,
+      "vacancy_loss": 196352.79,
+      "concessions": 4686.68,
+      "bad_debt": 2947.28,
+      "real_estate_taxes": 43819.16,
+      "insurance": 17903.18,
+      "utilities": 21859.8,
+      "repairs_maintenance": 22946.71,
+      "management_fee": 10299.57,
+      "general_admin": 5751.74,
+      "marketing": 1253.54,
+      "contract_services": 5244.66,
+      "capital_expenditures": 30112.29
+    }
+  },
+  "metrics": {
+    "gross_potential_rent": 559626.84,
+    "effective_gross_income": 349337.28,
+    "underwritten_vacancy_rate": 0.3757674667641029,
+    "operating_expenses": 129258.90840000001,
+    "noi": 213958.3716,
+    "annual_debt_service": 144557.34,
+    "dscr": 1.4800934466558393,
+    "debt_yield": 0.10751676964824121,
+    "ltv": 0.6589403973509934,
+    "breakeven_occupancy": 0.5002194826824247
+  },
+  "exceptions": [
+    "CP-3.2.2"
+  ],
+  "label_categories": {
+    "Contract Rent": "gross_potential_rent",
+    "Vacancy Loss": "vacancy_loss",
+    "Loss to Lease": "concessions",
+    "Uncollectible Rent": "bad_debt",
+    "Taxes - Real Estate": "real_estate_taxes",
+    "Insurance Expense": "insurance",
+    "Common Area Electric": "utilities",
+    "Maintenance": "repairs_maintenance",
+    "Repairs & Maintenance": "repairs_maintenance",
+    "Mgmt Fees": "management_fee",
+    "Professional Fees": "general_admin",
+    "Advertising": "marketing",
+    "Janitorial": "contract_services",
+    "Capital Expenditures": "capital_expenditures"
+  }
+}

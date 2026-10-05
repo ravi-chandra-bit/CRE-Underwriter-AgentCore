@@ -1,0 +1,29 @@
+{
+  "loan": {
+    "deal_id": "CRE-011",
+    "borrower_name": "Synthetic Multifamily Holdings 11 LLC",
+    "loan_type": "CRE",
+    "property_type": "multifamily",
+    "interest_rate": 0.0708,
+    "amortization_years": 30,
+    "term_years": 5,
+    "interest_only_years": 0,
+    "payments_per_year": 12,
+    "purpose": "Refinance",
+    "loan_amount": 1910000.0,
+    "appraised_value": 3000000.0
+  },
+  "portfolio": "cre-east",
+  "documents": [
+    {
+      "doc_id": "CRE-011-RR",
+      "doc_type": "rent_roll",
+      "filename": "rent_roll.csv"
+    },
+    {
+      "doc_id": "CRE-011-T12",
+      "doc_type": "t12",
+      "filename": "t12.csv"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "loan": {
+    "deal_id": "AG-011",
+    "borrower_name": "Synthetic Farms 11 LLC",
+    "loan_type": "AGRI",
+    "property_type": "farmland",
+    "interest_rate": 0.0673,
+    "amortization_years": 20,
+    "term_years": 20,
+    "interest_only_years": 0,
+    "payments_per_year": 1,
+    "purpose": "Expansion acreage",
+    "loan_amount": 2690000.0,
+    "appraised_value": 5010000.0
+  },
+  "portfolio": "ag-plains",
+  "documents": [
+    {
+      "doc_id": "AG-011-FIN",
+      "doc_type": "farm_financials",
+      "filename": "farm_financials.csv"
+    }
+  ]
+}

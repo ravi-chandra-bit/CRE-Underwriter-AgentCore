@@ -1,0 +1,56 @@
+{
+  "extraction": {
+    "rent_roll": {
+      "unit_count": 70,
+      "occupied_units": 67,
+      "in_place_annual_rent": 1061124.0
+    },
+    "t12": {
+      "gross_potential_rent": 1119412.8,
+      "vacancy_loss": 57700.22,
+      "real_estate_taxes": 100011.74,
+      "insurance": 43941.81,
+      "utilities": 36054.86,
+      "repairs_maintenance": 65891.78,
+      "management_fee": 29207.53,
+      "general_admin": 21032.78,
+      "marketing": 8270.95,
+      "contract_services": 16996.08,
+      "payroll": 74262.7,
+      "other_income": 48535.24,
+      "capital_expenditures": 30224.92
+    }
+  },
+  "metrics": {
+    "gross_potential_rent": 1109928.0,
+    "effective_gross_income": 1101251.91475505,
+    "underwritten_vacancy_rate": 0.05154507791942347,
+    "operating_expenses": 399500.25744265143,
+    "noi": 680751.6573123987,
+    "annual_debt_service": 442893.6,
+    "dscr": 1.5370546273696406,
+    "debt_yield": 0.12445185691268715,
+    "ltv": 0.7169069462647444,
+    "breakeven_occupancy": 0.7341544833923024
+  },
+  "exceptions": [],
+  "label_categories": {
+    "Contract Rent": "gross_potential_rent",
+    "Vacancy Loss": "vacancy_loss",
+    "Real Estate Taxes": "real_estate_taxes",
+    "Property Insurance": "insurance",
+    "Water & Sewer": "utilities",
+    "Common Area Electric": "utilities",
+    "Repairs & Maintenance": "repairs_maintenance",
+    "Turnover Costs": "repairs_maintenance",
+    "Management Fee": "management_fee",
+    "General & Administrative": "general_admin",
+    "Marketing & Promotion": "marketing",
+    "Janitorial": "contract_services",
+    "Personnel": "payroll",
+    "Parking Income": "other_income",
+    "Ancillary Revenue": "other_income",
+    "Other Income": "other_income",
+    "Capital Improvements": "capital_expenditures"
+  }
+}
