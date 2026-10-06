@@ -44,7 +44,10 @@ seed:            ## Upload deals to S3 and create demo users
 invoke:          ## Invoke the deployed agent (DEAL=CRE-001, UW_USERNAME/UW_PASSWORD set)
 	$(PY) -m scripts.invoke_agent --deal $${DEAL:-CRE-001}
 
+kindle:          ## Rebuild the Kindle Scribe study guide PDF from the docs
+	$(PY) -m pip install -q reportlab && $(PY) -m scripts.build_kindle_pdf
+
 rollback:        ## Point the prod endpoint at the previous agent version
 	$(PY) -m scripts.rollback --previous
 
-.PHONY: help install lint test data eval eval-live eval-remote demo demo-agent synth deploy seed invoke rollback
+.PHONY: help install lint test data eval eval-live eval-remote demo demo-agent synth deploy seed invoke kindle rollback

@@ -114,3 +114,4 @@ docs/              build guide, architecture, interview prep, resume
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md): request flow, controls, data model, design decisions
 - [docs/INTERVIEW_PREP.md](docs/INTERVIEW_PREP.md): how to explain and demo every claim
 - [docs/RESUME.md](docs/RESUME.md): resume bullets tied to evidence in this repo
+- [docs/kindle/](docs/kindle/): all of the above as a Kindle Scribe study guide PDF (`make kindle` rebuilds it)
